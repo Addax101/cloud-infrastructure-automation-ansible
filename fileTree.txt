@@ -1,0 +1,47 @@
+cloud-infrastructure-automation-ansible/
+├── inventory.yml
+├── main.yml
+├── group_vars/
+│   ├── all.yml
+│   ├── dev.yml
+│   └── prod.yml
+├── roles/
+│   ├── common/
+│   │   ├── tasks/
+│   │   │   ├── main.yml
+│   │   │   └── ...
+│   │   ├── files/
+│   │   └── templates/
+│   ├── ec2/
+│   │   ├── tasks/
+│   │   │   ├── main.yml
+│   │   │   └── ...
+│   │   ├── files/
+│   │   └── templates/
+│   ├── rds/
+│   │   ├── tasks/
+│   │   │   ├── main.yml
+│   │   │   └── ...
+│   │   ├── files/
+│   │   └── templates/
+│   └── ...
+├── credentials
+
+
+- The `inventory.yml` file contains the inventory of the hosts and groups to be managed by ansible.
+
+- The `main.yml` file is the main playbook that calls the different roles and tasks defined in the project.
+
+- The `group_vars/` directory contains the variables specific to each group defined in the inventory file.
+
+- The `roles/` directory contains the different roles representing the different components of the infrastructure. Each role contains tasks, files, and templates specific to that component.
+
+- The `credentials.md` file contains the instructions for configuring the cloud provider credentials.
+
+- The `README.md` file contains the documentation for the project.
+
+- The `LICENSE` file contains the licensing information for the project.
+
+- The `.gitignore` file is used to ignore files that should not be tracked by Git.
+
+Please note that this is just an example and the structure of the repository can be different based on the complexity of the project and the tools you used.
